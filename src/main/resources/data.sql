@@ -1,0 +1,2 @@
+INSERT INTO PERSONA VALUES (101, 'Christian', 'Masculino', '27', '12345678', 'Av Alamos', '987654321');
+INSERT INTO PERSONA VALUES (102, 'Carlos', 'Masculino', '27', '12345678', 'Av Los Angeles', '987654321');
