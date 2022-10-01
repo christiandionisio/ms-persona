@@ -1,7 +1,7 @@
 package com.example.mspersona.controller;
 
-import com.example.mspersona.models.Persona;
-import com.example.mspersona.service.PersonaService;
+import com.example.mspersona.models.Cliente;
+import com.example.mspersona.service.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,33 +11,33 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping("/personas")
+@RequestMapping("/clientes")
 public class PersonaController {
 
     @Autowired
-    private PersonaService service;
+    private ClienteService service;
 
     @GetMapping
-    public ResponseEntity<List<Persona>> findAll() {
+    public ResponseEntity<List<Cliente>> findAll() {
         return ResponseEntity.ok().body(service.findAll());
     }
 
     @PostMapping
-    public ResponseEntity<Persona> create(@RequestBody Persona persona) {
+    public ResponseEntity<Cliente> create(@RequestBody Cliente cliente) {
 
-        Persona personaDB = service.create(persona);
+        Cliente clienteDB = service.create(cliente);
 
         URI location = ServletUriComponentsBuilder.fromCurrentRequest()
-                .path("/{id}").buildAndExpand(personaDB.getId()).toUri();
+                .path("/{id}").buildAndExpand(clienteDB.getId()).toUri();
 
         return ResponseEntity.created(location).build();
     }
 
     @PutMapping
-    public ResponseEntity<Persona> update(@RequestBody Persona persona) {
-        return (service.findById(persona.getId()) == null)
+    public ResponseEntity<Cliente> update(@RequestBody Cliente cliente) {
+        return (service.findById(cliente.getId()) == null)
                 ? ResponseEntity.notFound().build()
-                : ResponseEntity.ok().body(service.update(persona));
+                : ResponseEntity.ok().body(service.update(cliente));
     }
 
     @DeleteMapping("/{id}")
