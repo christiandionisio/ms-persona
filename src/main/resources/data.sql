@@ -1,2 +1,2 @@
-INSERT INTO CLIENTE (id, nombre, genero, edad, identificacion, direccion, telefono, password, estado) VALUES (101, 'Christian', 'Masculino', '27', '12345678', 'Av Alamos', '987654321', '123456', true);
-INSERT INTO CLIENTE (id, nombre, genero, edad, identificacion, direccion, telefono, password, estado) VALUES (102, 'Carlos', 'Masculino', '27', '12345678', 'Av Los Angeles', '987654321', '123456', true);
+INSERT INTO CLIENTE (id, nombre, genero, edad, identificacion, direccion, telefono, password, estado) VALUES (101, 'Christian Dionisio', 'Masculino', '27', '12345678', 'Av Alamos', '987654321', '123456', true);
+INSERT INTO CLIENTE (id, nombre, genero, edad, identificacion, direccion, telefono, password, estado) VALUES (102, 'Carlos Gonzales', 'Masculino', '27', '12345678', 'Av Los Angeles', '987654321', '123456', true);

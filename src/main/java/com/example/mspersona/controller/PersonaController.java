@@ -22,6 +22,14 @@ public class PersonaController {
         return ResponseEntity.ok().body(service.findAll());
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<Cliente> update(@PathVariable Long id) {
+        Cliente clienteDB = service.findById(id);
+        return (clienteDB == null)
+                ? ResponseEntity.notFound().build()
+                : ResponseEntity.ok().body(clienteDB);
+    }
+
     @PostMapping
     public ResponseEntity<Cliente> create(@RequestBody Cliente cliente) {
 
