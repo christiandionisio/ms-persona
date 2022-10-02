@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/clientes")
-public class PersonaController {
+public class ClienteController {
 
     @Autowired
     private ClienteService service;
@@ -23,7 +23,7 @@ public class PersonaController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Cliente> update(@PathVariable Long id) {
+    public ResponseEntity<Cliente> findById(@PathVariable Long id) {
         Cliente clienteDB = service.findById(id);
         return (clienteDB == null)
                 ? ResponseEntity.notFound().build()
