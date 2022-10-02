@@ -18,5 +18,5 @@ docker network create challenge-nttdata
 ### Ejecutar la imagen
 
 ```
-docker run -p 8080:8080 --name ms-persona --network challenge-nttdata -d ms-persona:latest
+docker run -d -p 8080:8080 --name ms-persona --net challenge-nttdata ms-persona:latest
 ```
