@@ -1,5 +1,5 @@
 # Módulo: ms-persona
-Para correr localmente, se necesita ejecutar los siguientes comandos
+Para ejecutar localmente, se necesita ejecutar los siguientes comandos
 
 
 ### Crear la imagen
